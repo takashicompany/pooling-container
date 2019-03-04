@@ -138,7 +138,7 @@
 		/// オブジェクトを生成する
 		/// </summary>
 		/// <returns></returns>
-		private T Generate()
+		protected virtual T Generate()
 		{
 			var myObject = GameObject.Instantiate(_prefab, _container);
 
