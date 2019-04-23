@@ -106,7 +106,7 @@
 		/// オブジェクトを取得する
 		/// </summary>
 		/// <returns></returns>
-		public T Get()
+		public virtual T Get()
 		{
 			var myObject = Find(false);
 
