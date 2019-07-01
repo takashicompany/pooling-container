@@ -47,7 +47,7 @@
 		/// <summary>
 		/// 全てのオブジェクトを回収する
 		/// </summary>
-		public void CollectAll()
+		public virtual void CollectAll()
 		{
 			foreach (var item in _list)
 			{
