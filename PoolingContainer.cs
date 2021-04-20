@@ -13,14 +13,14 @@
 	public class PoolingContainer<T> where T : Component
 	{
 		[SerializeField]
-		private T _prefab;
+		protected T _prefab;
 
 		public T prefab { get; private set; }
 
 		[SerializeField]
-		private Transform _container;
+		protected Transform _container;
 
-		private List<T> _list = new List<T>();
+		protected List<T> _list = new List<T>();
 
 		public List<T> list { get{ return _list; } }
 
@@ -58,7 +58,7 @@
 		/// </summary>
 		/// <param name="flag"></param>
 		/// <returns></returns>
-		private T Find(bool flag)
+		protected T Find(bool flag)
 		{
 			if (_list == null) _list = new List<T>();
 			return _list.Find(m => m.gameObject.activeSelf == flag);
