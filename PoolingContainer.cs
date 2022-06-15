@@ -71,7 +71,7 @@
 		{
 			foreach (var p in _pooledList)
 			{
-				if (CanUse(p) == usable)
+				if (IsUsed(p) == usable)
 				{
 					yield return p;
 				}
