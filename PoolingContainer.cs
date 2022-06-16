@@ -16,12 +16,20 @@
 		[SerializeField]
 		protected T _prefab;
 
-		public T prefab { get; private set; }
+		public T prefab => _prefab;
 
 		[SerializeField]
 		protected Transform _container;
 
 		protected List<T> _pooledList = new List<T>();
+
+		// コンストラクタを入れると動かなくなるのでいれないでくれ
+		// public PoolingContainer(T prefab, Transform container)
+		// {
+		// 	_prefab = prefab;
+		// 	_container = container;
+		// 	_pooledList = new List<T>();
+		// }
 
 		public void Setup(T prefab, Transform container)
 		{
