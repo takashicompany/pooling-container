@@ -21,7 +21,7 @@
 			}
 		}
 
-		public T Get()
+		public virtual T Get()
 		{
 			var obj = _pooledList.FirstOrDefault(p => CanUse(p));
 
